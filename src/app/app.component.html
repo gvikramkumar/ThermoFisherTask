@@ -1,16 +1,59 @@
 <nav class="navbar" style="background-color:blue">
-  <a class="navbar-brand" href="#" style="color: white; font-weight: 700;">Thermo Fisher Scientific</a>
+  <!--<a class="navbar-brand" href="#" style="color: white; font-weight: 700;">Thermo Fisher Scientific</a>-->
+    <a class="navbar-brand" href="#" style="color: white; font-weight: 700;">Thermo</a>
 </nav>
 
-<!-- <div class="container" style="    padding-top: 2%;">
-  <div class="row" style="    background: #fff;
-    box-shadow: 0 0 3px rgba(0,0,0,.3);
-    padding: 15px;">
-    Providence, RI 10 Day Weather
+<div class="container" style="    padding-top: 2%">
+  <div class="row city-weather" *ngFor="let cityData of weatherData; let i=index;">
+    <div class="col-lg-12">
+      <label class="label-str">City :</label>
+      <label>{{cityData.name}}</label>
+    </div>
+    <div class="col-lg-12">
+      <label class="label-str">Description :</label> 
+      <label>{{cityData.weather[0].description}}</label>
+      <img class="icon-cls" src="assets/img/{{cityData.weather[0].icon}}.png" />
+    </div>
+    <div class="col-lg-12">
+      <label class="label-str">High/Low :</label> 
+      <label>{{cityData.main.temp_max}}/{{cityData.main.temp_min}}</label>
+    </div>
+    <div class="col-lg-12">
+      <label class="label-str">Precip :</label> 
+      <label>{{cityData.rain?(cityData.rain['3h']/100|percent):'N/A'}}</label>
+    </div>
+    <div class="col-lg-12">
+      <label class="label-str">Wind :</label> 
+      <label>{{cityData.wind.speed}} mph</label>
+    </div>
+    <div class="col-lg-12">
+      <label class="label-str">Humidity :</label> 
+      <label>{{(cityData.main.humidity/100)|percent}}</label>
+    </div>
   </div>
+<<<<<<< HEAD
 </div> -->
 
 
+=======
+</div> 
+weatherData : {{weatherData|json}}
+<!--<div class="container" style="    padding-top: 2%;">
+  <ngb-accordion [closeOthers]="true" activeIds="static-0">
+    <ngb-panel id="static-{{i}}" *ngFor="let cityData of weatherData; let i=index;">
+      <ng-template ngbPanelTitle> 
+        <span class="main-info" style="display:block">{{cityData.name}} Weather</span>
+        <span style="display:block">{{date | date:'EEEE h:m a'}}</span>
+        <span style="display:block">Description : {{cityData.weather[0].description}}</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        Description : {{cityData.weather[0].description}}
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>-->
+<!--
+>>>>>>> 9696fed4ad8e5f2f2e3c8c8f3abbd445fde005c5
 <div class="container">
   <h2>Accordion Example</h2>
   <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
@@ -52,4 +95,6 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
+
+

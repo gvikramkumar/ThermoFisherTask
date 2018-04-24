@@ -1,0 +1,23 @@
+.main-info{
+    color: black;
+
+}
+
+.main-info:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.city-weather{
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    padding: 15px;
+    margin-bottom: 2%;
+}
+.label-str{
+    font-weight: 700;
+}
+.icon-cls{
+    height: 40px;
+    width: 50px;
+}
